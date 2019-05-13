@@ -14,7 +14,8 @@ defmodule FirebaseAdminEx.Messaging.AndroidMessage.Config do
     data: %{},
     notification: %Notification{
       title: "",
-      body: ""
+      body: "",
+      sound: ""
     }
   ]
 
