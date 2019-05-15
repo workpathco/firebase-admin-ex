@@ -15,7 +15,8 @@ defmodule FirebaseAdminEx.Messaging.AndroidMessage.Notification do
     body_loc_key: "",
     body_loc_args: [],
     title_loc_key: "",
-    title_loc_args: []
+    title_loc_args: [],
+    channel_id: ""
   ]
 
   @type t :: %__MODULE__{
@@ -29,7 +30,8 @@ defmodule FirebaseAdminEx.Messaging.AndroidMessage.Notification do
           body_loc_key: String.t(),
           body_loc_args: List.t(),
           title_loc_key: String.t(),
-          title_loc_args: List.t()
+          title_loc_args: List.t(),
+          channel_id: String.t()
         }
 
   @derive Jason.Encoder
@@ -49,7 +51,8 @@ defmodule FirebaseAdminEx.Messaging.AndroidMessage.Notification do
       body_loc_key: Map.get(attributes, :body_loc_key),
       body_loc_args: Map.get(attributes, :body_loc_args),
       title_loc_key: Map.get(attributes, :title_loc_key),
-      title_loc_args: Map.get(attributes, :title_loc_args)
+      title_loc_args: Map.get(attributes, :title_loc_args),
+      channel_id: Map.get(attributes, :channel_id)
     }
   end
 
