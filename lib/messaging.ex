@@ -1,4 +1,6 @@
 defmodule FirebaseAdminEx.Messaging do
+  require Logger
+
   alias FirebaseAdminEx.{Request, Response, Errors}
   alias FirebaseAdminEx.Messaging.Message
 
