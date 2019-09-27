@@ -28,7 +28,8 @@ defmodule FirebaseAdminEx.Messaging do
   """
   @spec send(String.t(), String.t(), struct()) :: tuple()
   def send(project_id, oauth_token, %Message{} = message) do
-    Logger.info(message)
+    Logger.info("Sending message: #{inspect(message)}")
+
     with {:ok, message} <- Message.validate(message),
          {:ok, response} <-
            Request.request(
